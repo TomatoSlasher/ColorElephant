@@ -6,17 +6,20 @@ interface Page {
   curr: number;
   next: number;
   prev: number;
+  sort: boolean;
 }
 const MovieCard: React.FC = () => {
   const pageNum = useSelector((state: Page) => {
     return state;
   });
   const [moviePage, setmoviePage] = useState();
-
+  console.log(pageNum);
   useEffect(() => {
+    const sortedPage = pageNum.sort ? pageNum.curr : 25 - pageNum.curr;
+    console.log(sortedPage);
     const fetchHandler = async () => {
       const fetchTopRated = await fetch(
-        `https://api.themoviedb.org/3/movie/top_rated?api_key=ea9489d6b33eaa42e9d8a22a4487815e&language=en-US&page=${pageNum.curr}`
+        `https://api.themoviedb.org/3/movie/top_rated?api_key=ea9489d6b33eaa42e9d8a22a4487815e&language=en-US&page=${sortedPage}`
       );
       const topRatedData = await fetchTopRated.json();
       setmoviePage(topRatedData.results);

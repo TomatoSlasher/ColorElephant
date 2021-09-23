@@ -1,6 +1,6 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 
-const initialState = { curr: 1, next: 2, prev: 0 };
+const initialState = { curr: 1, next: 2, prev: 0, sort: true };
 
 const paginationSlice = createSlice({
   name: "pagination",
@@ -15,6 +15,17 @@ const paginationSlice = createSlice({
       state.curr = state.curr - 1;
       state.next = state.next - 1;
       state.prev = state.prev - 1;
+    },
+    sortAsc(state) {
+      state.sort = true;
+    },
+    sortDes(state) {
+      state.sort = false;
+    },
+    restPage(state) {
+      state.curr = 1;
+      state.next = 2;
+      state.prev = 0;
     },
   },
 });

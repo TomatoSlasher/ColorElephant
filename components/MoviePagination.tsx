@@ -26,7 +26,9 @@ const MoviePagination: React.FC = () => {
         <button onClick={prevPage}>Prev {pageNum.prev}</button>
       )}
       <h3 className={classes["curr-page"]}>{pageNum.curr}</h3>
-      <button onClick={nextPage}>Next {pageNum.next} </button>
+      {pageNum.next < 25 && (
+        <button onClick={nextPage}>Next {pageNum.next} </button>
+      )}
     </div>
   );
 };
