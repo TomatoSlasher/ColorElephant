@@ -5,11 +5,34 @@
   width: 220px;
   margin: 1rem;
 }
+.fav {
+  background-color: rgb(255, 253, 115);
+}
 .movie-item-poster {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 220px;
 }
+.movie-content-container {
+  margin: 0rem 0.5rem;
+}
+.movie-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie-title-container a {
+  max-width: 70%;
+}
 .movie-item-title {
   height: 1.5rem;
+}
+.movie-item-title:hover {
+  color: blue;
+}
+.star-icon {
+  cursor: pointer;
+}
+.star-icon:hover .star-path {
+  fill: rgb(231, 231, 0);
 }

@@ -13,10 +13,9 @@ const MovieCard: React.FC = () => {
     return state;
   });
   const [moviePage, setmoviePage] = useState();
-  console.log(pageNum);
+
   useEffect(() => {
     const sortedPage = pageNum.sort ? pageNum.curr : 25 - pageNum.curr;
-    console.log(sortedPage);
     const fetchHandler = async () => {
       const fetchTopRated = await fetch(
         `https://api.themoviedb.org/3/movie/top_rated?api_key=ea9489d6b33eaa42e9d8a22a4487815e&language=en-US&page=${sortedPage}`
