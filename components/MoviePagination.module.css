@@ -1,0 +1,25 @@
+.movie-pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie-pagination-container button {
+  all: unset;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(178, 111, 241);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.movie-pagination-container button:hover {
+  background-color: rgb(171, 83, 253);
+}
+.curr-page {
+  background-color: rgb(178, 111, 241);
+  color: white;
+  margin: 1rem 1rem;
+  padding: 1rem 1.3rem;
+
+  border-radius: 100%;
+}
