@@ -1,0 +1,15 @@
+.movie-item-container {
+  list-style: none;
+  background-color: white;
+  border-radius: 10px;
+  width: 220px;
+  margin: 1rem;
+}
+.movie-item-poster {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 220px;
+}
+.movie-item-title {
+  height: 1.5rem;
+}
