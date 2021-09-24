@@ -5,19 +5,19 @@
 }
 .movie-pagination-container button {
   all: unset;
-  color: white;
+  color: #9300ce;
   font-weight: bold;
-  background-color: rgb(178, 111, 241);
+  background-color: #d5b9e1;
   padding: 0.5rem 1rem;
   border-radius: 10px;
   cursor: pointer;
 }
 .movie-pagination-container button:hover {
-  background-color: rgb(171, 83, 253);
+  background-color: #ccafda;
 }
 .curr-page {
-  background-color: rgb(178, 111, 241);
-  color: white;
+  background-color: #d5b9e1;
+  color: #9300ce;
   margin: 1rem 1rem;
   padding: 1rem 1.3rem;
 

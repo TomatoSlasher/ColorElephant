@@ -7,7 +7,7 @@
   position: relative;
 }
 .fav {
-  background-color: rgb(255, 253, 115);
+  background-color: rgb(255, 253, 146);
 }
 .movie-item-poster {
   border-top-left-radius: 10px;
@@ -28,12 +28,41 @@
 .movie-item-title {
   height: 1.5rem;
 }
-.movie-item-title:hover {
-  color: blue;
-}
+
 .star-icon {
+  cursor: pointer;
+}
+.active-star-icon {
   cursor: pointer;
 }
 .star-icon:hover .star-path {
   fill: rgb(231, 231, 0);
+}
+.view-on-container {
+  all: unset;
+
+  text-align: center;
+  /* margin: 1rem 0rem; */
+  border-radius: 10px;
+  padding: 1rem 0rem;
+
+  background-color: #0d2e38;
+}
+.view-on-container:hover {
+  background-color: #104555;
+}
+.view-on {
+  all: unset;
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 1rem 0rem;
+  margin-bottom: 0.5rem;
+
+  background: -webkit-linear-gradient(#90cea1, #01b4e4);
+  -webkit-background-clip: text;
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

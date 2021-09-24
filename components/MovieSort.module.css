@@ -40,6 +40,7 @@
   width: 12rem;
   border-radius: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.22);
+  z-index: 20;
 }
 .dropdown-container::after {
   content: " ";

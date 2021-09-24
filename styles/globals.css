@@ -19,7 +19,6 @@ a {
   width: 70px;
   height: 70px;
   position: relative;
-  position: absolute;
 }
 .box .percent svg {
   width: 70px;
@@ -90,7 +89,6 @@ a {
 }
 .circ-container {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 10;
+  top: -1.5rem;
+  right: -1rem;
 }
