@@ -3,7 +3,7 @@ import MovieInfo from "./MovieInfo";
 interface Movie {
   title: string;
   poster_path: string;
-  vote_average: string;
+  vote_average: number;
   release_date: string;
   id: number;
 }
