@@ -127,8 +127,8 @@ const MovieInfo = (props: { data: Movie }) => {
                         x2="1"
                         y2="1"
                       >
-                        <stop offset="0%" stop-color="#90cea1"></stop>
-                        <stop offset="100%" stop-color="#01b4e4"></stop>
+                        <stop offset="0%" stopColor="#90cea1"></stop>
+                        <stop offset="100%" stopColor="#01b4e4"></stop>
                       </linearGradient>
                       <circle
                         ref={secCirc}
