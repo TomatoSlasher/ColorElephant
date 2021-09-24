@@ -17,10 +17,10 @@ const paginationSlice = createSlice({
       state.prev = state.prev - 1;
     },
     sortAsc(state) {
-      state.sort = true;
+      state.sort = false;
     },
     sortDes(state) {
-      state.sort = false;
+      state.sort = true;
     },
     restPage(state) {
       state.curr = 1;

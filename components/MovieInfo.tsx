@@ -1,15 +1,20 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import classes from "./MovieItem.module.css";
 interface Movie {
   title: string;
   poster_path: string;
-  vote_average: string;
+  vote_average: number;
   release_date: string;
   id: number;
 }
 const MovieInfo = (props: { data: Movie }) => {
   const [isFav, setIsFav] = useState(false);
-
+  const secCirc = useRef<any>(null);
+  useEffect(() => {
+    secCirc.current.style.strokeDashoffset = `calc(186 - (186 * ${
+      props.data.vote_average * 10
+    }) / 100`;
+  }, [secCirc]);
   const addFavs = (id: number) => {
     let favsList = JSON.parse(localStorage.getItem("Favs") || "[]");
     if (!favsList.includes(props.data.id)) {
@@ -81,9 +86,47 @@ const MovieInfo = (props: { data: Movie }) => {
           <h4 className={classes["movie-item-date"]}>
             {props.data.release_date.slice(0, 4)}
           </h4>
-          <h4 className={classes["movie-item-rating"]}>
-            {props.data.vote_average}/10
-          </h4>
+          <div className="circ-container">
+            <div className="box">
+              <div className="rating-circle">
+                <div className="whole-circ">
+                  <svg className="outer-circ">
+                    <circle className="circ" cx="22" cy="22" r="37"></circle>
+                  </svg>
+
+                  <div className="percent">
+                    <svg>
+                      <circle cx="30" cy="30" r="30"></circle>
+                      <linearGradient
+                        id="linearColors"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1"
+                      >
+                        <stop offset="0%" stop-color="#833ab4"></stop>
+                        <stop offset="100%" stop-color="#fd1d1d"></stop>
+                      </linearGradient>
+                      <circle
+                        ref={secCirc}
+                        id="sec-circ"
+                        cx="30"
+                        cy="30"
+                        r="30"
+                        stroke-width="4"
+                        stroke="url(#linearColors)"
+                      ></circle>
+                    </svg>
+                    <div className="num">
+                      <h2 className="show-rating">
+                        {props.data.vote_average * 10}%
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </li>
     </Fragment>

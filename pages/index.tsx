@@ -1,6 +1,6 @@
 import MoviePagination from "../components/MoviePagination";
 import React from "react";
-import MovieSort from "../components/MovieSort";
+import MovieSort from "../components/MovieHeader";
 import dynamic from "next/dynamic";
 const MovieCard = dynamic(() => import("../components/MovieCard"), {
   ssr: false,

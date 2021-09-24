@@ -1,0 +1,53 @@
+.sort-container {
+  position: relative;
+}
+.curr-sort {
+  all: unset;
+  padding: 1rem 1rem;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.curr-sort:hover {
+  background-color: rgb(236, 236, 236);
+}
+.sort-btn {
+  all: unset;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 11rem;
+  border-radius: 10px;
+}
+.sort-btn:hover {
+  background-color: rgb(236, 236, 236);
+}
+@keyframes show {
+  0% {
+    transform: translateY(-3rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+.dropdown-container {
+  animation: show 0.3s ease-in-out forwards;
+  position: absolute;
+  top: 4rem;
+  background-color: white;
+  width: 12rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.dropdown-container::after {
+  content: " ";
+  position: absolute;
+  left: 25px;
+  top: -10px;
+  border-top: none;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
