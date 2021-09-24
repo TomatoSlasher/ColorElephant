@@ -136,7 +136,7 @@ const MovieInfo = (props: { data: Movie }) => {
                         cx="30"
                         cy="30"
                         r="30"
-                        stroke-width="4"
+                        strokeWidth="4"
                         stroke="url(#linearColors)"
                       ></circle>
                     </svg>
