@@ -3,11 +3,15 @@
 }
 .curr-sort {
   all: unset;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: white;
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15vw;
 }
 .curr-sort:hover {
   background-color: rgb(236, 236, 236);
@@ -18,6 +22,8 @@
   cursor: pointer;
   width: 11rem;
   border-radius: 10px;
+  font-size: 15px;
+  color: black;
 }
 .sort-btn:hover {
   background-color: rgb(236, 236, 236);
@@ -35,7 +41,7 @@
 .dropdown-container {
   animation: show 0.3s ease-in-out forwards;
   position: absolute;
-  top: 4rem;
+  top: 3.8rem;
   background-color: white;
   width: 12rem;
   border-radius: 10px;
@@ -51,4 +57,32 @@
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
   border-bottom: 10px solid white;
+}
+@media only screen and (max-width: 1150px) {
+  .curr-sort {
+    width: 20vw;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .curr-sort {
+    width: 30vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .curr-sort {
+    width: 35vw;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .sort-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .curr-sort {
+    width: 85%;
+  }
+  .dropdown-container {
+    left: 1rem;
+  }
 }

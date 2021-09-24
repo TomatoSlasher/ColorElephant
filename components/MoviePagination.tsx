@@ -15,19 +15,31 @@ const MoviePagination: React.FC = () => {
 
   const nextPage = () => {
     dispatch(paginationActions.nextPage());
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const prevPage = () => {
     dispatch(paginationActions.prevPage());
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div className={classes["movie-pagination-container"]}>
       {pageNum.prev > 0 && (
-        <button onClick={prevPage}>Prev {pageNum.prev}</button>
+        <button onClick={prevPage}>
+          <span className={classes["pagination-btn"]}>Prev {pageNum.prev}</span>
+        </button>
       )}
-      <h3 className={classes["curr-page"]}>{pageNum.curr}</h3>
+      <h3 className={classes["curr-page"]}>
+        {" "}
+        <span className={classes["pagination-btn"]}> {pageNum.curr}</span>
+      </h3>
       {pageNum.next < 25 && (
-        <button onClick={nextPage}>Next {pageNum.next} </button>
+        <button onClick={nextPage}>
+          <span className={classes["pagination-btn"]}>
+            {" "}
+            Next {pageNum.next}{" "}
+          </span>
+        </button>
       )}
     </div>
   );

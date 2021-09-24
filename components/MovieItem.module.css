@@ -22,13 +22,14 @@
   justify-content: space-between;
   align-items: center;
 }
-.movie-title-container a {
-  max-width: 70%;
-}
+
 .movie-item-title {
   height: 1.5rem;
+  max-width: 70%;
 }
-
+.movie-item-date {
+  color: rgb(92, 92, 92);
+}
 .star-icon {
   cursor: pointer;
 }
@@ -65,4 +66,22 @@
 
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width: 550px) {
+  .movie-item-container {
+    width: 300px;
+  }
+
+  .movie-item-poster {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .movie-item-container {
+    width: 260px;
+  }
+
+  .movie-item-poster {
+    width: 260px;
+  }
 }

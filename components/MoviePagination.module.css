@@ -5,19 +5,24 @@
 }
 .movie-pagination-container button {
   all: unset;
-  color: #9300ce;
   font-weight: bold;
-  background-color: #d5b9e1;
+  background-color: #0d2e38;
   padding: 0.5rem 1rem;
   border-radius: 10px;
   cursor: pointer;
 }
+.pagination-btn {
+  background: -webkit-linear-gradient(#90cea1, #01b4e4);
+  -webkit-background-clip: text;
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .movie-pagination-container button:hover {
-  background-color: #ccafda;
+  background-color: #104555;
 }
 .curr-page {
-  background-color: #d5b9e1;
-  color: #9300ce;
+  background-color: #0d2e38;
   margin: 1rem 1rem;
   padding: 1rem 1.3rem;
 

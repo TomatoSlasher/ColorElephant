@@ -2,11 +2,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ce009b;
-  background-color: #d5b9e1;
+  background-color: #0d2e38;
   margin: 1rem 2rem;
   padding: 0rem 1rem;
   border-radius: 10px;
-  color: #9300ce;
+  /* color: #01b4e4; */
   font-weight: bold;
+}
+.header-container h2 {
+  background: -webkit-linear-gradient(#90cea1, #01b4e4);
+  -webkit-background-clip: text;
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width: 550px) {
+  .header-container {
+    display: block;
+    padding: 0.5rem 0rem;
+  }
+  .header-container h2 {
+    margin: 0.5rem 0rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
